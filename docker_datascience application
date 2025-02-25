@@ -1,0 +1,35 @@
+# machine-learning-deployement-using docker github file (25/02/2025)
+msis@msis:~$ sudo docke rps
+[sudo] password for msis: 
+sudo: a password is required
+msis@msis:~$ docke rps
+Command 'docke' not found, did you mean:
+  command 'docker' from deb docker.io (24.0.7-0ubuntu2~22.04.1)
+  command 'docker' from deb podman-docker (3.4.4+ds1-1ubuntu1.22.04.2)
+Try: sudo apt install <deb name>
+msis@msis:~$ docker ps
+permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Get "http://%2Fvar%2Frun%2Fdocker.sock/v1.24/containers/json": dial unix /var/run/docker.sock: connect: permission denied
+msis@msis:~$ sudo docker ps
+[sudo] password for msis: 
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+msis@msis:~$ sudo docker ps -a
+CONTAINER ID   IMAGE                            COMMAND                  CREATED        STATUS                      PORTS                                                  NAMES
+0adb06e7b821   sreedocker123/mompopcafeapp:v1   "docker-php-entrypoi…"   11 days ago    Exited (255) 5 days ago     0.0.0.0:5000->80/tcp, :::5000->80/tcp                  mompopcafeapp
+cb65f06f697d   mysql:latest                     "docker-entrypoint.s…"   11 days ago    Exited (255) 5 days ago     33060/tcp, 0.0.0.0:3307->3306/tcp, :::3307->3306/tcp   mysql
+ee94b3a477f5   nodeapp:v1                       "docker-entrypoint.s…"   13 days ago    Exited (137) 12 days ago                                                           nodeapp
+a7bb46631130   sanjana0910/jspmaven:v1          "catalina.sh run"        13 days ago    Exited (143) 12 days ago                                                           jspmaven
+3e4b7302c3e4   sanjana0910/cafeapp:v1           "/bin/sh -c 'apachec…"   2 weeks ago    Exited (137) 2 weeks ago                                                           cafeapp
+2631b53d06d0   sanjana0910/bdaapache:v2         "/bin/sh -c 'apachec…"   2 weeks ago    Exited (137) 2 weeks ago                                                           apache
+33acdbaad8e7   bdaapache:v1                     "/bin/bash"              3 weeks ago    Exited (255) 2 weeks ago    0.0.0.0:8011->80/tcp, :::8011->80/tcp                  bdaapache
+4c6e9828f646   ubuntu:latest                    "/bin/bash"              3 weeks ago    Exited (255) 2 weeks ago                                                           ubu
+fd2cbfe415a9   centos:latest                    "/bin/bash"              3 weeks ago    Exited (255) 2 weeks ago                                                           centos
+28f2fdf117b8   megharajnaik/phpapp:v1           "/bin/sh -c 'apachec…"   2 months ago   Exited (137) 2 months ago                                                          fervent_chebyshev
+6bfaabe6a773   79c8db8a6d1c                     "/bin/sh -c 'apt-get…"   2 months ago   Exited (100) 2 months ago                                                          intelligent_cray
+24dcc783bf57   hello-world                      "/hello"                 3 months ago   Exited (0) 3 months ago                                                            magical_dijkstra
+msis@msis:~$ vi /lib/systemd/system/docker.service 
+msis@msis:~$ vi /lib/systemd/system/docker.service 
+
+[1]+  Stopped                 vi /lib/systemd/system/docker.service
+msis@msis:~$ vi /lib/systemd/system/docker.service 
+
+[2]+  Stopped                 vi /lib/systemd/system/docker.service
